@@ -13,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ClientesComponent implements OnInit {
 
   clientes : Cliente[];
+  paginador : any;
 
   constructor(private clienteService: ClienteService,
               private router: Router,
@@ -46,7 +47,10 @@ export class ClientesComponent implements OnInit {
       ).subscribe(
         //se modifica esta linea para adecuar a respuesta con  content en el json para paginacion
        //(clientes) => {this.clientes = clientes }
-        response => {this.clientes = response.content as Cliente[]}
+        response => {
+          this.clientes = response.content as Cliente[];
+          this.paginador = response;
+        }
       );
   });
 }
