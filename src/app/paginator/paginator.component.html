@@ -1,1 +1,4 @@
-<p>paginator works!</p>
+<ul *ngIf="paginas?.length >0">
+  <li *ngFor= "let pagina of paginas"></li>
+  {{pagina}}
+</ul>
