@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PaginatorComponent implements OnInit {
  @Input() paginador: any;
  paginas : number[];
+ feature2: any;
   constructor() { }
 
   ngOnInit(): void {
