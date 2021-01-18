@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PaginatorComponent implements OnInit {
  @Input() paginador: any;
+ feature1: any;
  paginas : number[];
   constructor() { }
 
